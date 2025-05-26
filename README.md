@@ -51,6 +51,13 @@ Iceraven Browser is a feature-rich, privacy-focused web browser for Android devi
 
 ## 📥 Download
 
+### Latest Release
+
+**Iceraven 2.31.0** (May 8, 2024)
+
+- Based on Fenix 138.0
+- [View Release Notes](https://github.com/fork-maintainers/iceraven-browser/releases/tag/iceraven-2.31.0)
+
 ### Supported Architectures
 
 - **ARM64-v8a**: 64-bit ARM devices
@@ -58,7 +65,31 @@ Iceraven Browser is a feature-rich, privacy-focused web browser for Android devi
 - **x86_64**: 64-bit Intel devices
 - **x86**: 32-bit Intel devices
 
-Visit our [Download Section](https://github.com/fork-maintainers/iceraven-browser#download) for the latest builds.
+### Download Links
+
+Visit our [Releases Page](https://github.com/fork-maintainers/iceraven-browser/releases) for the latest builds and previous versions.
+
+### Recent Updates
+
+- **2.31.0** (May 8, 2024): Latest release based on Fenix 138.0
+- **2.30.1** (Apr 20, 2024):
+  - Fixed toolbar style
+  - Made pocket recommendation default to false
+  - Added ability to disable home button in toolbar
+  - Removed Mozilla's sponsor settings
+  - Added ability to hide sign in button in settings
+  - Added ability to customize homepage to a website
+- **2.30.0** (Apr 5, 2024):
+  - Added ability to enable/disable fullscreen toast
+  - Fixed about:config issue
+  - Set toolbar position default to bottom
+
+### Installation
+
+1. Download the appropriate APK for your device architecture
+2. Enable "Install from Unknown Sources" in your Android settings
+3. Open the downloaded APK to install
+4. Launch Iceraven Browser and enjoy!
 
 ## 🛠️ Development
 
@@ -116,7 +147,7 @@ We welcome contributions from the community! Here's how you can help:
 
 ## 📚 Documentation
 
-For detailed documentation, visit our [Documentation Section](docs/building-guide.html).
+For detailed documentation, visit our [Documentation Section](https://myst-25.github.io/iceraven-browser/).
 
 ## 📄 License
 
@@ -137,6 +168,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **GitHub Issues**: [Report Bugs](https://github.com/fork-maintainers/iceraven-browser/issues)
 - **Telegram**: [@Myst_25](https://t.me/Myst_25)
+- **Website**: [Iceraven Browser](https://myst-25.github.io/iceraven-browser/)
 
 ---
 
