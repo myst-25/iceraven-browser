@@ -255,7 +255,7 @@ body {
 
 /* Download Section */
 .download {
-    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+    padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
     background: var(--background-alt);
     width: 100%;
     overflow-x: hidden;
@@ -292,8 +292,9 @@ body {
     background: var(--card-bg);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--card-shadow);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
 }
 
 .download-row {
@@ -331,7 +332,6 @@ body {
     }
 }
 
-/* Download architecture and button container */
 .download-item {
     background: var(--card-bg);
     border-radius: var(--border-radius);
@@ -350,7 +350,7 @@ body {
     display: flex;
     align-items: center;
     gap: clamp(1rem, 3vw, 1.5rem);
-    transition: all 0.3s ease;
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
     flex: 1;
@@ -365,16 +365,16 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     font-weight: 500;
     font-size: clamp(1rem, 3vw, 1.1rem);
     white-space: nowrap;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
 }
 
-/* Hover effects */
 .download-item:hover {
     transform: translateY(-3px);
     box-shadow: var(--card-shadow-hover);
@@ -388,6 +388,7 @@ body {
 .download-item:hover .download-button {
     background: var(--primary-color);
     color: white;
+    transform: translateY(-2px);
 }
 
 /* Fix for high DPI displays */
@@ -775,11 +776,108 @@ body {
     }
 }
 
-/* Community Section Responsive */
+/* Community Section */
+.community {
+    padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+    background: var(--background-alt);
+    position: relative;
+    overflow: hidden;
+}
+
+.community h2 {
+    text-align: center;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .community-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-    gap: clamp(1rem, 3vw, 2rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.community-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
+    box-shadow: var(--card-shadow);
+}
+
+.community-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(96, 165, 250, 0.2) 50%, 
+        transparent 100%
+    );
+}
+
+.community-card i {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--primary-color);
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    transition: transform 0.3s ease;
+}
+
+.community-card h3 {
+    font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.community-card p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+}
+
+.community-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    background: rgba(96, 165, 250, 0.1);
+    transition: var(--transition);
+}
+
+.community-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.community-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.community-card:hover i {
+    transform: scale(1.1);
 }
 
 /* Footer Responsive */
