@@ -46,25 +46,25 @@ body {
 /* Responsive Typography */
 @media (max-width: 1200px) {
     html {
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
 @media (max-width: 992px) {
     html {
-        font-size: 14px;
+        font-size: 17px;
     }
 }
 
 @media (max-width: 768px) {
     html {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
     html {
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
@@ -77,6 +77,7 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-top: 60px;
 }
 
 .hero-content {
@@ -85,10 +86,11 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
+    padding-top: 20px;
 }
 
 .hero h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     line-height: 1.2;
     margin-bottom: 1.5rem;
     background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
@@ -98,7 +100,7 @@ body {
 }
 
 .hero p {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     max-width: 800px;
     margin: 0 auto 2rem;
     color: var(--text-light);
@@ -110,7 +112,7 @@ body {
     gap: clamp(0.75rem, 2vw, 1.5rem);
     justify-content: center;
     margin-bottom: 2rem;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     flex-wrap: wrap;
 }
 
@@ -171,16 +173,19 @@ body {
     }
 
     .hero h2 {
-        font-size: clamp(1.8rem, 6vw, 2.5rem);
+        font-size: clamp(2rem, 7vw, 3rem);
+        line-height: 1.3;
         margin-bottom: 1rem;
     }
 
     .hero p {
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
+        line-height: 1.5;
         margin-bottom: 1.5rem;
     }
 
     .version-info {
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
         margin-bottom: 1.5rem;
     }
 
@@ -202,15 +207,15 @@ body {
     }
 
     .hero h2 {
-        font-size: clamp(1.6rem, 5vw, 2rem);
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
     }
 
     .hero p {
-        font-size: clamp(0.85rem, 2.5vw, 1rem);
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
     }
 
     .version-info {
-        font-size: clamp(0.8rem, 2vw, 0.95rem);
+        font-size: clamp(0.95rem, 3vw, 1.1rem);
     }
 }
 
@@ -663,21 +668,16 @@ body {
 
 /* Header Styles */
 header {
-    background: rgba(26, 32, 44, 0.98);
-    backdrop-filter: var(--glass-backdrop);
-    -webkit-backdrop-filter: var(--glass-backdrop);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 1000;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform;
+    background: rgba(26, 32, 44, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--header-shadow);
 }
 
 .header-container {
@@ -685,12 +685,10 @@ header {
     margin: 0 auto;
     padding: 0.75rem 1.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     position: relative;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 60px;
+    z-index: 1001;
 }
 
 .logo {
@@ -698,6 +696,8 @@ header {
     display: flex;
     align-items: center;
     min-width: 0;
+    gap: 0.75rem;
+    border: none;
 }
 
 .logo a {
@@ -708,10 +708,17 @@ header {
     gap: 0.75rem;
     -webkit-tap-highlight-color: transparent;
     min-width: 0;
+    border: none;
+}
+
+.logo img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
 }
 
 .logo h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 600;
     background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
     -webkit-background-clip: text;
@@ -722,6 +729,29 @@ header {
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* Mobile Responsive Fixes */
+@media screen and (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.6rem;
+    }
+    
+    .logo img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+    
+    .logo img {
+        width: 56px;
+        height: 56px;
+    }
 }
 
 .main-nav {
@@ -771,54 +801,42 @@ header {
     touch-action: manipulation;
     flex: 0 0 auto;
     margin-left: 0.5rem;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
 }
 
 .mobile-menu-btn span {
     display: block;
-    width: 22px;
+    width: 24px;
     height: 2px;
     background: currentColor;
-    margin: 4px 0;
+    margin: 5px 0;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     -webkit-transform-origin: center;
     transform-origin: center;
 }
 
-.mobile-menu-btn.active span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-}
-
-.mobile-menu-btn.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.mobile-menu-btn.active span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-}
-
-/* Mobile Menu Styles */
+/* Mobile Navigation */
 @media screen and (max-width: 768px) {
     .header-container {
         padding: 0.75rem 1rem;
-        position: relative;
-        z-index: 1001;
-        min-height: 56px;
-    }
-
-    .logo {
-        flex: 1;
-        min-width: 0;
-    }
-
-    .logo h1 {
-        font-size: 1.2rem;
-        max-width: 200px;
+        min-height: 60px;
     }
 
     .mobile-menu-btn {
-        display: block;
-        margin-left: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .main-nav {
@@ -829,14 +847,14 @@ header {
         height: 100%;
         height: 100dvh;
         background: rgba(26, 32, 44, 0.98);
-        backdrop-filter: var(--glass-backdrop);
-        -webkit-backdrop-filter: var(--glass-backdrop);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         border-left: 1px solid rgba(255, 255, 255, 0.1);
         padding: 5rem 1.5rem 2rem;
         z-index: 1000;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         transform: translateX(100%);
         will-change: transform;
     }
@@ -860,6 +878,14 @@ header {
         font-size: 1.1rem;
         border-radius: 8px;
         transition: background-color 0.3s ease;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+        outline: none;
     }
 
     /* Prevent body scroll when menu is open */
@@ -871,11 +897,13 @@ header {
     }
 }
 
-/* Android-specific fixes */
-@supports (-webkit-touch-callout: none) {
+/* Fix for iOS safe areas */
+@supports (padding: max(0px)) {
     .header-container {
         padding-top: max(0.75rem, env(safe-area-inset-top));
         padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+        padding-left: max(1.5rem, env(safe-area-inset-left));
+        padding-right: max(1.5rem, env(safe-area-inset-right));
     }
 }
 
@@ -889,36 +917,23 @@ header {
     }
 }
 
-/* Fix for Android viewport height */
-@media screen and (max-width: 768px) {
-    .header-container {
-        position: relative;
-        z-index: 1001;
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .mobile-menu-btn {
+        border: 2px solid currentColor;
+    }
+    
+    .main-nav a {
+        border: 1px solid currentColor;
     }
 }
 
-/* Fix for Android Chrome fixed positioning */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform;
-}
-
-/* Fix for Android Chrome header container */
-.header-container {
-    position: relative;
-    z-index: 1001;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .mobile-menu-btn span,
+    .main-nav {
+        transition: none;
+    }
 }
 
 /* Features Section */
