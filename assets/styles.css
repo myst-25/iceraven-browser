@@ -120,10 +120,19 @@ body {
 
 .version-info span {
     background: var(--card-bg);
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem;
     border-radius: var(--border-radius);
     color: var(--text-color);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.version-info span:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .hero-buttons {
@@ -295,6 +304,12 @@ body {
     box-shadow: var(--card-shadow);
     border: var(--glass-border);
     backdrop-filter: var(--glass-backdrop);
+    transition: var(--transition);
+}
+
+.download-table:hover {
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .download-row {
@@ -354,6 +369,10 @@ body {
     position: relative;
     overflow: hidden;
     flex: 1;
+    border-radius: var(--border-radius);
+    background: var(--card-bg);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
 }
 
 .download-button {
@@ -373,6 +392,16 @@ body {
     overflow: hidden;
     border: var(--glass-border);
     backdrop-filter: var(--glass-backdrop);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.download-button:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .download-item:hover {
@@ -383,12 +412,6 @@ body {
 
 .download-item:hover .download-arch {
     background: rgba(45, 55, 72, 0.9);
-}
-
-.download-item:hover .download-button {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
 }
 
 /* Fix for high DPI displays */
@@ -814,6 +837,11 @@ body {
     border: var(--glass-border);
     backdrop-filter: var(--glass-backdrop);
     box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300px;
 }
 
 .community-card::before {
@@ -862,12 +890,17 @@ body {
     border-radius: var(--border-radius);
     background: rgba(96, 165, 250, 0.1);
     transition: var(--transition);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
+    box-shadow: var(--card-shadow);
 }
 
 .community-link:hover {
     background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .community-card:hover {
@@ -1522,15 +1555,30 @@ header {
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.contributor-avatars:hover {
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .contributor-avatars a {
     display: block;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: var(--transition);
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--card-shadow);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
 }
 
 .contributor-avatars img {
@@ -1538,33 +1586,18 @@ header {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: var(--transition);
     border: 2px solid var(--primary-color);
 }
 
 .contributor-avatars a:hover {
     transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
 }
 
 .contributor-avatars a:hover img {
     transform: scale(1.1);
-}
-
-.contributor-avatars a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px var(--primary-color);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.contributor-avatars a:hover::after {
-    opacity: 1;
+    border-color: var(--primary-dark);
 }
 
 /* Active state for touch devices */
