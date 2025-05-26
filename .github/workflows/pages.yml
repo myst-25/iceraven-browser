@@ -1,37 +1,41 @@
-name: Deploy to GitHub Pages
+name: Update Iceraven Release Info
 
 on:
-  push:
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *" # Runs daily at midnight UTC
 
-# Grant write permissions to the GITHUB_TOKEN
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
-  deploy:
+  update-release-info:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          path: "."
+          fetch-depth: 0
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        continue-on-error: true
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
 
-      - name: Check deployment status
-        if: steps.deployment.outcome != 'success'
+      - name: Install dependencies
         run: |
-          echo "Deployment failed. Please check the logs for more information."
-          exit 1
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Fetch and update release info
+        run: python .github/scripts/update_release_info.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update Iceraven version and download links"
+          file_pattern: |
+            README.md
+            index.html
+            docs/building-guide.html
+            manifest.json
