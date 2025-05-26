@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="256" cy="256" r="240" fill="#0066cc"/>
+    
+    <!-- Fox Head -->
+    <path d="M256 120c-75.2 0-136 60.8-136 136s60.8 136 136 136 136-60.8 136-136S331.2 120 256 120zm0 240c-57.4 0-104-46.6-104-104s46.6-104 104-104 104 46.6 104 104-46.6 104-104 104z" fill="#ffffff"/>
+    
+    <!-- Fox Ears -->
+    <path d="M200 160l-20-40h40l20 40h-40zm112 0l20-40h-40l-20 40h40z" fill="#ffffff"/>
+    
+    <!-- Fox Eyes -->
+    <circle cx="200" cy="200" r="16" fill="#0066cc"/>
+    <circle cx="312" cy="200" r="16" fill="#0066cc"/>
+    
+    <!-- Fox Nose -->
+    <path d="M256 240c-8 0-16 8-16 16s8 16 16 16 16-8 16-16-8-16-16-16z" fill="#ffffff"/>
+</svg> 
