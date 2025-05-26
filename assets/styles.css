@@ -139,33 +139,39 @@ body {
     border-radius: var(--border-radius);
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .cta-button.primary {
     background: var(--primary-color);
     color: white;
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.2);
 }
 
 .cta-button.primary:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(96, 165, 250, 0.3);
 }
 
 .cta-button.secondary {
     background: transparent;
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 6px rgba(96, 165, 250, 0.1);
 }
 
 .cta-button.secondary:hover {
     background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(96, 165, 250, 0.2);
 }
 
 /* Responsive adjustments */
@@ -327,10 +333,16 @@ body {
 
 /* Download architecture and button container */
 .download-item {
-    display: flex;
-    flex-direction: column;
     background: var(--card-bg);
-    transition: transform 0.3s ease;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: var(--transition);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
+    box-shadow: var(--card-shadow);
 }
 
 .download-arch {
@@ -364,7 +376,9 @@ body {
 
 /* Hover effects */
 .download-item:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .download-item:hover .download-arch {
@@ -575,16 +589,15 @@ body {
 
 .feature-card {
     background: var(--card-bg);
-    padding: clamp(1.5rem, 4vw, 2rem);
     border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 2rem;
     text-align: center;
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
+    box-shadow: var(--card-shadow);
 }
 
 .feature-card::before {
@@ -623,15 +636,10 @@ body {
 }
 
 /* Hover effects */
-@media (hover: hover) {
-    .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--card-shadow-hover);
-    }
-
-    .feature-card:hover i {
-        transform: scale(1.1);
-    }
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Active state for touch devices */
