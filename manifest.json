@@ -1,0 +1,16 @@
+{
+  "name": "Iceraven Browser",
+  "short_name": "Iceraven",
+  "description": "A fast, secure, and private web browser",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#007acc",
+  "theme_color": "#007acc",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
