@@ -1,0 +1,246 @@
+/* Documentation Layout */
+.docs-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+/* Sidebar Styles */
+.docs-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.docs-nav {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.docs-nav h3 {
+    color: #007acc;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.docs-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.docs-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.docs-nav a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.docs-nav a:hover {
+    background: #f5f5f5;
+    color: #007acc;
+}
+
+/* Main Content Styles */
+.docs-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.docs-content section {
+    margin-bottom: 3rem;
+}
+
+.docs-content h2 {
+    color: #007acc;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.content-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.content-card ul, .content-card ol {
+    padding-left: 1.5rem;
+}
+
+.content-card li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Code Blocks and Copy Button */
+pre {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+    position: relative;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
+}
+
+.copy-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #007acc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-5px);
+}
+
+pre:hover .copy-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.copy-button:hover {
+    background: #005999;
+}
+
+.copy-button:active {
+    transform: translateY(1px);
+}
+
+.copy-button.copied {
+    background: #28a745;
+}
+
+.copy-button.failed {
+    background: #dc3545;
+}
+
+/* Add some padding to pre to accommodate the copy button */
+pre {
+    padding-top: 2.5rem;
+}
+
+/* Ensure code blocks don't overflow */
+pre code {
+    white-space: pre;
+    word-wrap: normal;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .docs-container {
+        flex-direction: column;
+    }
+
+    .docs-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .docs-nav {
+        position: static;
+    }
+}
+
+/* Active Navigation State */
+.docs-nav a.active {
+    background: #007acc;
+    color: #fff;
+}
+
+/* Scroll Margin for Anchor Links */
+section {
+    scroll-margin-top: 2rem;
+}
+
+/* Support Section Styles */
+.support {
+    margin-top: 4rem;
+    padding: 2rem 0;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.support-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.support-card i {
+    font-size: 2.5rem;
+    color: #007acc;
+    margin-bottom: 1rem;
+}
+
+.support-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.support-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.support-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.support-link:hover {
+    background: #005999;
+}
+
+.support-link:active {
+    transform: translateY(1px);
+} 
