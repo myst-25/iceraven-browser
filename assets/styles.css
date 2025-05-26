@@ -1397,5 +1397,147 @@ header {
         color: var(--text-color);
         text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     }
+}
+
+/* Contributors Section */
+.contributors {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contributors p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.contributor-avatars {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.contributor-avatars a {
+    display: block;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contributor-avatars img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.contributor-avatars a:hover {
+    transform: translateY(-3px);
+}
+
+.contributor-avatars a:hover img {
+    transform: scale(1.1);
+}
+
+.contributor-avatars a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contributor-avatars a:hover::after {
+    opacity: 1;
+}
+
+/* Active state for touch devices */
+@media (hover: none) {
+    .contributor-avatars a:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .contributors {
+        margin-top: 1.5rem;
+    }
+
+    .contributor-avatars {
+        gap: 0.75rem;
+    }
+
+    .contributor-avatars img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Small screen fixes */
+@media screen and (max-width: 480px) {
+    .contributors {
+        margin-top: 1.25rem;
+    }
+
+    .contributor-avatars {
+        gap: 0.5rem;
+    }
+
+    .contributor-avatars img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Landscape mode fixes */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .contributors {
+        margin-top: 1rem;
+    }
+
+    .contributor-avatars {
+        gap: 0.5rem;
+    }
+}
+
+/* High DPI display fixes */
+@media screen and (min-resolution: 120dpi) {
+    .contributor-avatars img {
+        border-width: 1px;
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    .contributor-avatars a {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .contributor-avatars a,
+    .contributor-avatars img {
+        transition: none;
+    }
+
+    .contributor-avatars a:hover {
+        transform: none;
+    }
+
+    .contributor-avatars a:hover img {
+        transform: none;
+    }
 } 
 } 
