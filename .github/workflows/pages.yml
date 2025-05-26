@@ -6,6 +6,12 @@ on:
       - main
   workflow_dispatch:
 
+# Grant write permissions to the GITHUB_TOKEN
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
