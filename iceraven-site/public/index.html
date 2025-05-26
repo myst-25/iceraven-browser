@@ -1,249 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Iceraven Browser - A fast, secure, and private web browser">
-    <meta name="theme-color" content="#007acc">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Iceraven Browser - A fast, secure, and private web browser"
+    />
+    <meta name="theme-color" content="#007acc" />
     <title>Iceraven Browser - Fast, Secure, and Private</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="manifest.json">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="/">
-                    <h1>Iceraven Browser</h1>
-                </a>
-            </div>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="https://github.com/fork-maintainers/iceraven-browser/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
-                    <li><a href="docs/building-guide.html">Docs</a></li>
-                </ul>
-            </nav>
+      <div class="header-container">
+        <div class="logo">
+          <a href="/">
+            <h1>Iceraven Browser</h1>
+          </a>
         </div>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download</a></li>
+            <li>
+              <a
+                href="https://github.com/fork-maintainers/iceraven-browser/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Issues</a
+              >
+            </li>
+            <li><a href="docs/building-guide.html">Docs</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    
+
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Welcome to<br>a more powerful internet</h2>
-                <div class="version-info">
-                    <span>Iceraven: 2.31.0</span>
-                    <span>Fenix: 138.0</span>
-                </div>
-                <p>Beautifully designed, privacy-focused, and packed with features.<br>We care about your experience, not your data.</p>
-                <div class="hero-buttons">
-                    <a href="#download" class="cta-button primary">Download Now</a>
-                    <a href="https://github.com/fork-maintainers/iceraven-browser" class="cta-button secondary" target="_blank">GitHub</a>
-                </div>
-                <div class="contributors">
-                    <p>Contributors</p>
-                    <div class="contributor-avatars">
-                        <a href="https://github.com/fork-maintainers" target="_blank" title="fork-maintainers">
-                            <img src="https://github.com/fork-maintainers.png" alt="fork-maintainers" width="40" height="40">
-                        </a>
-                        <a href="https://github.com/myst-25" target="_blank" title="myst-25">
-                            <img src="https://github.com/myst-25.png" alt="myst-25" width="40" height="40">
-                        </a>
-                    </div>
-                </div>
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Welcome to<br />a more powerful internet</h2>
+          <div class="version-info">
+            <span>Iceraven: 2.31.0</span>
+            <span>Fenix: 138.0</span>
+          </div>
+          <p>
+            Beautifully designed, privacy-focused, and packed with features.<br />We
+            care about your experience, not your data.
+          </p>
+          <div class="hero-buttons">
+            <a href="#download" class="cta-button primary">Download Now</a>
+            <a
+              href="https://github.com/fork-maintainers/iceraven-browser"
+              class="cta-button secondary"
+              target="_blank"
+              >GitHub</a
+            >
+          </div>
+          <div class="contributors">
+            <p>Contributors</p>
+            <div class="contributor-avatars">
+              <a
+                href="https://github.com/fork-maintainers"
+                target="_blank"
+                title="fork-maintainers"
+              >
+                <img
+                  src="https://github.com/fork-maintainers.png"
+                  alt="fork-maintainers"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <a
+                href="https://github.com/myst-25"
+                target="_blank"
+                title="myst-25"
+              >
+                <img
+                  src="https://github.com/myst-25.png"
+                  alt="myst-25"
+                  width="40"
+                  height="40"
+                />
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="features" class="features">
-            <h2>Powerful Features</h2>
-            <p class="section-subtitle">Iceraven Browser brings advanced capabilities and customization options to your Android device</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-sliders-h"></i>
-                    <h3>Advanced Configuration</h3>
-                    <p>Full access to about:config for deep browser customization and fine-tuning of your browsing experience.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <h3>Extended Add-on Support</h3>
-                    <p>Access to a wider range of Firefox add-ons from AMO, with the ability to request additional add-ons.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-memory"></i>
-                    <h3>Memory Management</h3>
-                    <p>Tab suspension feature to prevent browser termination due to memory constraints, ensuring smoother performance.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Privacy Control</h3>
-                    <p>Option to disable recently visited websites on the homepage for enhanced privacy.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-code-branch"></i>
-                    <h3>GeckoView Engine</h3>
-                    <p>Built on Mozilla's powerful GeckoView engine with custom modifications for enhanced functionality.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h3>Development Status</h3>
-                    <p>Currently in alpha stage with automatic GitHub releases. Perfect for users comfortable with experimental software.</p>
-                </div>
-            </div>
-        </section>
+      <section id="features" class="features">
+        <h2>Powerful Features</h2>
+        <p class="section-subtitle">
+          Iceraven Browser brings advanced capabilities and customization
+          options to your Android device
+        </p>
 
-        <section id="download" class="download">
-            <h2>Download Iceraven</h2>
-            <div class="download-table">
-                <div class="download-row">
-                    <div class="download-item">
-                        <div class="download-arch">
-                            <i class="fas fa-microchip"></i>
-                            <div class="arch-info">
-                                <h3>ARM64-v8a</h3>
-                                <p>64-bit ARM devices</p>
-                            </div>
-                        </div>
-                        <a href="downloads/iceraven-arm64-v8a.apk" class="download-button">
-                            <i class="fas fa-download"></i>
-                            Download
-                        </a>
-                    </div>
-                    <div class="download-item">
-                        <div class="download-arch">
-                            <i class="fas fa-microchip"></i>
-                            <div class="arch-info">
-                                <h3>ARM-v7a</h3>
-                                <p>32-bit ARM devices</p>
-                            </div>
-                        </div>
-                        <a href="downloads/iceraven-armeabi-v7a.apk" class="download-button">
-                            <i class="fas fa-download"></i>
-                            Download
-                        </a>
-                    </div>
-                    <div class="download-item">
-                        <div class="download-arch">
-                            <i class="fas fa-microchip"></i>
-                            <div class="arch-info">
-                                <h3>x86_64</h3>
-                                <p>64-bit Intel devices</p>
-                            </div>
-                        </div>
-                        <a href="downloads/iceraven-x86_64.apk" class="download-button">
-                            <i class="fas fa-download"></i>
-                            Download
-                        </a>
-                    </div>
-                    <div class="download-item">
-                        <div class="download-arch">
-                            <i class="fas fa-microchip"></i>
-                            <div class="arch-info">
-                                <h3>x86</h3>
-                                <p>32-bit Intel devices</p>
-                            </div>
-                        </div>
-                        <a href="downloads/iceraven-x86.apk" class="download-button">
-                            <i class="fas fa-download"></i>
-                            Download
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <i class="fas fa-sliders-h"></i>
+            <h3>Advanced Configuration</h3>
+            <p>
+              Full access to about:config for deep browser customization and
+              fine-tuning of your browsing experience.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-puzzle-piece"></i>
+            <h3>Extended Add-on Support</h3>
+            <p>
+              Access to a wider range of Firefox add-ons from AMO, with the
+              ability to request additional add-ons.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-memory"></i>
+            <h3>Memory Management</h3>
+            <p>
+              Tab suspension feature to prevent browser termination due to
+              memory constraints, ensuring smoother performance.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Privacy Control</h3>
+            <p>
+              Option to disable recently visited websites on the homepage for
+              enhanced privacy.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-code-branch"></i>
+            <h3>GeckoView Engine</h3>
+            <p>
+              Built on Mozilla's powerful GeckoView engine with custom
+              modifications for enhanced functionality.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Development Status</h3>
+            <p>
+              Currently in alpha stage with automatic GitHub releases. Perfect
+              for users comfortable with experimental software.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section id="community" class="community">
-            <h2>Join Our Community</h2>
-            <p class="section-subtitle">Be part of our growing community of users and contributors</p>
-            <div class="community-grid">
-                <div class="community-card">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                    <p>Contribute to the project</p>
-                    <a href="https://github.com/fork-maintainers/iceraven-browser" class="community-link" target="_blank">Visit GitHub</a>
+      <section id="download" class="download">
+        <h2>Download Iceraven</h2>
+        <div class="download-table">
+          <div class="download-row">
+            <div class="download-item">
+              <div class="download-arch">
+                <i class="fas fa-microchip"></i>
+                <div class="arch-info">
+                  <h3>ARM64-v8a</h3>
+                  <p>64-bit ARM devices</p>
                 </div>
-                <div class="community-card">
-                    <i class="fas fa-book"></i>
-                    <h3>Documentation</h3>
-                    <p>Learn how to use Iceraven</p>
-                    <a href="docs/building-guide.html" class="community-link">Read Docs</a>
-                </div>
-                <div class="community-card">
-                    <i class="fas fa-comments"></i>
-                    <h3>Issues</h3>
-                    <p>Report bugs and request features</p>
-                    <a href="https://github.com/fork-maintainers/iceraven-browser/issues" class="community-link" target="_blank">View Issues</a>
-                </div>
+              </div>
+              <a
+                href="downloads/iceraven-arm64-v8a.apk"
+                class="download-button"
+              >
+                <i class="fas fa-download"></i>
+                Download
+              </a>
             </div>
-        </section>
+            <div class="download-item">
+              <div class="download-arch">
+                <i class="fas fa-microchip"></i>
+                <div class="arch-info">
+                  <h3>ARM-v7a</h3>
+                  <p>32-bit ARM devices</p>
+                </div>
+              </div>
+              <a
+                href="downloads/iceraven-armeabi-v7a.apk"
+                class="download-button"
+              >
+                <i class="fas fa-download"></i>
+                Download
+              </a>
+            </div>
+            <div class="download-item">
+              <div class="download-arch">
+                <i class="fas fa-microchip"></i>
+                <div class="arch-info">
+                  <h3>x86_64</h3>
+                  <p>64-bit Intel devices</p>
+                </div>
+              </div>
+              <a href="downloads/iceraven-x86_64.apk" class="download-button">
+                <i class="fas fa-download"></i>
+                Download
+              </a>
+            </div>
+            <div class="download-item">
+              <div class="download-arch">
+                <i class="fas fa-microchip"></i>
+                <div class="arch-info">
+                  <h3>x86</h3>
+                  <p>32-bit Intel devices</p>
+                </div>
+              </div>
+              <a href="downloads/iceraven-x86.apk" class="download-button">
+                <i class="fas fa-download"></i>
+                Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="community" class="community">
+        <h2>Join Our Community</h2>
+        <p class="section-subtitle">
+          Be part of our growing community of users and contributors
+        </p>
+        <div class="community-grid">
+          <div class="community-card">
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+            <p>Contribute to the project</p>
+            <a
+              href="https://github.com/fork-maintainers/iceraven-browser"
+              class="community-link"
+              target="_blank"
+              >Visit GitHub</a
+            >
+          </div>
+          <div class="community-card">
+            <i class="fas fa-book"></i>
+            <h3>Documentation</h3>
+            <p>Learn how to use Iceraven</p>
+            <a href="docs/building-guide.html" class="community-link"
+              >Read Docs</a
+            >
+          </div>
+          <div class="community-card">
+            <i class="fas fa-comments"></i>
+            <h3>Issues</h3>
+            <p>Report bugs and request features</p>
+            <a
+              href="https://github.com/fork-maintainers/iceraven-browser/issues"
+              class="community-link"
+              target="_blank"
+              >View Issues</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
-    
+
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Iceraven Browser</h4>
-                <p>Fast, secure, and private browsing for everyone.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="docs/building-guide.html">Documentation</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Connect With Us</h4>
-                <div class="social-links">
-                    <a href="https://github.com/fork-maintainers/iceraven-browser" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                    <a href="https://github.com/fork-maintainers/iceraven-browser/issues" target="_blank" aria-label="Report Issues"><i class="fas fa-bug"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Site Owner</h4>
-                <div class="owner-profile">
-                    <div class="owner-name">
-                        <span class="name-text">Myst25</span>
-                    </div>
-                    <div class="owner-links">
-                        <a href="https://github.com/myst-25" target="_blank" class="owner-link">
-                            <i class="fab fa-github"></i>
-                            @myst-25
-                        </a>
-                        <a href="https://t.me/Myst_25" target="_blank" class="owner-link">
-                            <i class="fab fa-telegram"></i>
-                            @Myst_25
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Source Code</h4>
-                <div class="source-links">
-                    <a href="https://github.com/fork-maintainers/iceraven-browser" class="source-code-button" target="_blank">
-                        <i class="fab fa-github"></i>
-                        Browser Source
-                    </a>
-                    <a href="https://github.com/myst-25/iceraven-browser" class="source-code-button" target="_blank">
-                        <i class="fas fa-code"></i>
-                        Site Source
-                    </a>
-                </div>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Iceraven Browser</h4>
+          <p>Fast, secure, and private browsing for everyone.</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Iceraven Browser. All rights reserved.</p>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="docs/building-guide.html">Documentation</a></li>
+          </ul>
         </div>
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a
+              href="https://github.com/fork-maintainers/iceraven-browser"
+              target="_blank"
+              aria-label="GitHub Repository"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://github.com/fork-maintainers/iceraven-browser/issues"
+              target="_blank"
+              aria-label="Report Issues"
+              ><i class="fas fa-bug"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Site Owner</h4>
+          <div class="owner-profile">
+            <div class="owner-name">
+              <span class="name-text">Myst25</span>
+            </div>
+            <div class="owner-links">
+              <a
+                href="https://github.com/myst-25"
+                target="_blank"
+                class="owner-link"
+              >
+                <i class="fab fa-github"></i>
+                @myst-25
+              </a>
+              <a href="https://t.me/Myst_25" target="_blank" class="owner-link">
+                <i class="fab fa-telegram"></i>
+                @Myst_25
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Source Code</h4>
+          <div class="source-links">
+            <a
+              href="https://github.com/fork-maintainers/iceraven-browser"
+              class="source-code-button"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+              Browser Source
+            </a>
+            <a
+              href="https://github.com/myst-25/iceraven-browser"
+              class="source-code-button"
+              target="_blank"
+            >
+              <i class="fas fa-code"></i>
+              Site Source
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Iceraven Browser. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="assets/scripts.js"></script>
-</body>
+  </body>
 </html>
