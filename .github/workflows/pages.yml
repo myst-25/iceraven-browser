@@ -19,3 +19,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./iceraven-site
           publish_branch: gh-pages
+          # Explicitly set build script to empty to avoid potential conflicts
+          BUILD_SCRIPT: ""
