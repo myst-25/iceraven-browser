@@ -1,0 +1,31 @@
+{
+  "name": "iceraven-site",
+  "version": "1.0.0",
+  "description": "A web application for the Iceraven browser.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "iceraven",
+    "browser",
+    "web",
+    "PWA"
+  ],
+  "author": "Fork Maintainers",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^3.0.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.0.0",
+    "css-loader": "^5.0.0",
+    "style-loader": "^2.0.0",
+    "babel-loader": "^8.0.0",
+    "babel-core": "^7.0.0",
+    "babel-preset-env": "^1.0.0"
+  }
+}

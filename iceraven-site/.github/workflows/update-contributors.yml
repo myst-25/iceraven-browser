@@ -1,0 +1,79 @@
+name: Update Contributors
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install -g all-contributors-cli
+
+      - name: Get contributors
+        id: contributors
+        run: |
+          # Get all contributors from git log
+          CONTRIBUTORS=$(git log --format='%aN <%aE>' | sort -u)
+          
+          # Create JSON array of contributors
+          JSON_CONTRIBUTORS="["
+          while IFS= read -r contributor; do
+            if [ ! -z "$contributor" ]; then
+              if [ "$JSON_CONTRIBUTORS" != "[" ]; then
+                JSON_CONTRIBUTORS="$JSON_CONTRIBUTORS,"
+              fi
+              JSON_CONTRIBUTORS="$JSON_CONTRIBUTORS{\"name\":\"$contributor\"}"
+            fi
+          done <<< "$CONTRIBUTORS"
+          JSON_CONTRIBUTORS="$JSON_CONTRIBUTORS]"
+          
+          # Save to file
+          echo "$JSON_CONTRIBUTORS" > contributors.json
+          
+          # Set output for next step
+          echo "contributors=$JSON_CONTRIBUTORS" >> $GITHUB_OUTPUT
+
+      - name: Update HTML with contributors
+        run: |
+          # Read the current index.html
+          HTML=$(cat public/index.html)
+          
+          # Extract the contributors section
+          CONTRIBUTORS_SECTION=$(cat contributors.json | jq -r 'map("<a href=\"https://github.com/\(.name)\" target=\"_blank\" title=\"\(.name)\"><img src=\"https://github.com/\(.name).png\" alt=\"\(.name)\" width=\"40\" height=\"40\"></a>") | join("\n")')
+          
+          # Create new contributors section
+          NEW_SECTION="<div class=\"contributors\">\n    <p>Contributors</p>\n    <div class=\"contributor-avatars\">\n$CONTRIBUTORS_SECTION\n    </div>\n</div>"
+          
+          # Replace the old section with the new one
+          NEW_HTML=$(echo "$HTML" | sed '/<div class="contributors">/,/<\/div>/c\'"$NEW_SECTION")
+          
+          # Write back to file
+          echo "$NEW_HTML" > public/index.html
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/index.html
+          git commit -m "Update contributors list" || exit 0
+          git push 
