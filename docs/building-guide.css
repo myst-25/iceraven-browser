@@ -78,6 +78,12 @@ header {
   width: 44px;
   height: 44px;
   object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 .logo h1 {
@@ -89,6 +95,7 @@ header {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 
 .main-nav {
