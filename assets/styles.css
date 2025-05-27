@@ -85,6 +85,7 @@ main {
 .hero {
   padding: var(--section-padding) var(--content-padding);
   display: flex;
+  margin-top: -130px;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -102,8 +103,8 @@ main {
 
 .hero h2 {
   font-size: clamp(2.5rem, 6vw, 4rem);
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  line-height: 1;
+  margin-bottom: 2rem;
   background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
   -webkit-background-clip: text;
   background-clip: text;
@@ -384,19 +385,20 @@ main {
 
   .download-row {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    align-items: stretch;
+    padding: 0;
+    overflow-x: visible;
   }
 
   .download-item {
     padding: 1rem;
-    min-width: 250px;
-    flex: 0 0 auto;
+    min-width: 100%;
+    max-width: 100%;
+    flex: 1 1 auto;
   }
 
   .download-arch {
@@ -1148,7 +1150,7 @@ footer {
 /* Fix for Android Chrome address bar */
 @media screen and (max-height: 500px) {
   .hero {
-    min-height: 100vh;
+    min-height: 50vh;
     padding-top: calc(60px + env(safe-area-inset-top));
   }
 
@@ -1281,9 +1283,9 @@ header {
   background: rgba(26, 32, 44, 0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  height: 60px; /* Consistent height across all devices */
+  height: 70px; /* Consistent height across all devices */
   transition: all 0.3s ease;
   padding-top: env(safe-area-inset-top, 0); /* iOS safe area support */
   overflow: hidden; /* Prevent any scrollbars */
@@ -1610,18 +1612,18 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem;
-  background: var(--card-bg);
-  border-radius: var(--border-radius);
-  border: var(--glass-border);
-  backdrop-filter: var(--glass-backdrop);
-  box-shadow: var(--card-shadow);
-  transition: var(--transition);
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  border: none;
+  backdrop-filter: none;
+  box-shadow: none;
+  transition: none;
 }
 
 .contributor-avatars:hover {
-  box-shadow: var(--card-shadow-hover);
-  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  border-color: initial;
 }
 
 .contributor-avatars a {
@@ -1630,66 +1632,43 @@ header {
   transition: var(--transition);
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: var(--card-shadow);
-  border: var(--glass-border);
-  backdrop-filter: var(--glass-backdrop);
 }
 
 .contributor-avatars img {
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   object-fit: cover;
   transition: var(--transition);
-  border: 2px solid var(--primary-color);
 }
 
-.contributor-avatars a:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.contributor-avatars a:hover img {
-  transform: scale(1.1);
-  border-color: var(--primary-dark);
-}
-
-/* Active state for touch devices */
-@media (hover: none) {
-  .contributor-avatars a:active {
-    transform: scale(0.95);
-  }
-}
-
-/* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .contributors {
     margin-top: 1.5rem;
   }
 
   .contributor-avatars {
-    gap: 0.75rem;
+    gap: 1.25rem;
   }
 
   .contributor-avatars img {
-    width: 36px;
-    height: 36px;
+    width: 64px;
+    height: 64px;
   }
 }
 
-/* Small screen fixes */
 @media screen and (max-width: 480px) {
   .contributors {
     margin-top: 1.25rem;
   }
 
   .contributor-avatars {
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .contributor-avatars img {
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
   }
 }
 
