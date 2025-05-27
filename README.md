@@ -60,8 +60,8 @@ Iceraven Browser is a feature-rich, privacy-focused web browser for Android devi
 
 ### Supported Architectures
 
-- **ARM64-v8a**: 64-bit ARM devices
-- **ARM-v7a**: 32-bit ARM devices
+- **ARM64-v2.31.0a**: 64-bit ARM devices
+- **ARM-v2.31.0a**: 32-bit ARM devices
 - **x86_64**: 64-bit Intel devices
 - **x86**: 32-bit Intel devices
 
@@ -95,8 +95,8 @@ Visit our [Releases Page](https://github.com/fork-maintainers/iceraven-browser/r
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm (v6 or higher)
+- Node.js (v2.31.0 or higher)
+- npm (v2.31.0 or higher)
 - Git
 
 ### Local Setup
