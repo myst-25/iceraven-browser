@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-A powerful, privacy-focused browser for Android devices, built on Mozilla's GeckoView engine.
+A powerful, priv2.32.0cy-focused browser for Android devices, built on Mozilla's GeckoView engine.
 
 [Features](#features) • [Download](#download) • [Documentation](#documentation) • [Contributing](#contributing)
 
@@ -15,11 +15,11 @@ A powerful, privacy-focused browser for Android devices, built on Mozilla's Geck
 
 ## ✨ Overview
 
-Iceraven Browser is a feature-rich, privacy-focused web browser for Android devices. Built on Mozilla's powerful GeckoView engine, it offers advanced customization options, extended add-on support, and enhanced privacy features.
+Iceraven Browser is a feature-rich, priv2.32.0cy-focused web browser for Android devices. Built on Mozilla's powerful GeckoView engine, it offers adv2.32.0nced customization options, extended add-on support, and enhanced priv2.32.0cy features.
 
 ## 🚀 Features
 
-### 🔧 Advanced Configuration
+### 🔧 Adv2.32.0nced Configuration
 
 - Full access to `about:config` for deep browser customization
 - Fine-tuned browsing experience
@@ -37,10 +37,10 @@ Iceraven Browser is a feature-rich, privacy-focused web browser for Android devi
 - Prevents browser termination due to memory constraints
 - Optimized performance for low-memory devices
 
-### 🛡️ Privacy Control
+### 🛡️ Priv2.32.0cy Control
 
 - Option to disable recently visited websites
-- Enhanced privacy features
+- Enhanced priv2.32.0cy features
 - Customizable tracking protection
 
 ### 🏗️ GeckoView Engine
@@ -60,8 +60,8 @@ Iceraven Browser is a feature-rich, privacy-focused web browser for Android devi
 
 ### Supported Architectures
 
-- **ARM64-v2.32.0a**: 64-bit ARM devices
-- **ARM-v2.32.0a**: 32-bit ARM devices
+- **ARM64-v2.32.0**: 64-bit ARM devices
+- **ARM-v2.32.0**: 32-bit ARM devices
 - **x86_64**: 64-bit Intel devices
 - **x86**: 32-bit Intel devices
 
