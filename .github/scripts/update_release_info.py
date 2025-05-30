@@ -1,7 +1,6 @@
 import requests
 import re
 import os
-import json
 
 # GitHub API settings
 REPO = "fork-maintainers/iceraven-browser"
@@ -21,10 +20,10 @@ def update_version_in_file(file_path, version):
     
     # Update version patterns
     patterns = [
-        (r'Iceraven: [\d\.]+', f'Iceraven: {version}'),
-        (r'Version: [\d\.]+', f'Version: {version}'),
-        (r'v[\d\.]+', f'v{version}'),
-        (r'iceraven-[\d\.]+', f'iceraven-{version}')
+        (r'Iceraven: [\d\.a]+', f'Iceraven: {version}'),
+        (r'Version: [\d\.a]+', f'Version: {version}'),
+        (r'v[\d\.a]+', f'v{version}'),
+        (r'iceraven-[\d\.a]+', f'iceraven-{version}')
     ]
     
     for pattern, replacement in patterns:
@@ -37,25 +36,27 @@ def update_download_links(file_path, assets):
     """Update download links in a file."""
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
-    
-    # Create a mapping of asset types to their download URLs
+
+    # Build asset mapping based on architecture hints
     asset_map = {}
     for asset in assets:
         name = asset['name'].lower()
+        url = asset['browser_download_url']
+
         if 'arm64' in name:
-            asset_map['arm64'] = asset['browser_download_url']
-        elif 'arm-v7a' in name:
-            asset_map['arm-v7a'] = asset['browser_download_url']
+            asset_map['arm64'] = url
+        elif re.search(r'armeabi.*v7a', name):
+            asset_map['arm-v7a'] = url
         elif 'x86_64' in name:
-            asset_map['x86_64'] = asset['browser_download_url']
-        elif 'x86' in name:
-            asset_map['x86'] = asset['browser_download_url']
-    
-    # Update download links
+            asset_map['x86_64'] = url
+        elif re.search(r'\bx86\b', name):
+            asset_map['x86'] = url
+
+    # Replace old links with updated URLs
     for arch, url in asset_map.items():
-        pattern = rf'https?://[^\s"\']+{arch}[^\s"\']*'
+        pattern = rf'https://github\.com/[^\s"\']+{arch}[^\s"\']*'
         content = re.sub(pattern, url, content, flags=re.IGNORECASE)
-    
+
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(content)
 
@@ -80,7 +81,7 @@ def main():
             update_version_in_file(file_path, version)
             update_download_links(file_path, assets)
     
-    print(f"Successfully updated to version {version}")
+    print(f"✅ Successfully updated to version {version}")
 
 if __name__ == "__main__":
-    main() 
+    main()
