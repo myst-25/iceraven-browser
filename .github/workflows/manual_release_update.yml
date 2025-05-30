@@ -1,9 +1,10 @@
-# .github/workflows/manual_release_update.yml
-
 name: Manual Release Info Update
 
 on:
   workflow_dispatch:
+
+permissions:
+  contents: write  # Required to push changes back to the repository
 
 jobs:
   update-release-info:
@@ -25,3 +26,11 @@ jobs:
 
       - name: Run update_release_info script
         run: python .github/scripts/update_release_info.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md index.html docs/building-guide.html manifest.json
+          git commit -m "Update version to latest Iceraven release" || echo "No changes to commit"
+          git push
