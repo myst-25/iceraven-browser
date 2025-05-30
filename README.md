@@ -56,12 +56,12 @@ Iceraven Browser is a feature-rich, privacy-focused web browser for Android devi
 **Iceraven 2.31.0** (May 8, 2024)
 
 - Based on Fenix 138.0
-- [View Release Notes](https://github.com/fork-maintainers/iceraven-browser/releases/tag/iceraven-2.31.0)
+- [View Release Notes](https://github.com/fork-maintainers/iceraven-browser/releases/tag/iceraven-2.32.0)
 
 ### Supported Architectures
 
-- **ARM64-v2.31.0a**: 64-bit ARM devices
-- **ARM-v2.31.0a**: 32-bit ARM devices
+- **ARM64-v2.32.0a**: 64-bit ARM devices
+- **ARM-v2.32.0a**: 32-bit ARM devices
 - **x86_64**: 64-bit Intel devices
 - **x86**: 32-bit Intel devices
 
@@ -95,8 +95,8 @@ Visit our [Releases Page](https://github.com/fork-maintainers/iceraven-browser/r
 
 ### Prerequisites
 
-- Node.js (v2.31.0 or higher)
-- npm (v2.31.0 or higher)
+- Node.js (v2.32.0 or higher)
+- npm (v2.32.0 or higher)
 - Git
 
 ### Local Setup
