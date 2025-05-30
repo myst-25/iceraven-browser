@@ -1,0 +1,22 @@
+# .github/workflows/manual_release_update.yml
+
+name: Manual Release Info Update
+
+on:
+  workflow_dispatch:  # This makes the workflow manually triggered from the GitHub UI
+
+jobs:
+  update-release-info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run release update script
+        run: python .github/scripts/update_release_info.py
