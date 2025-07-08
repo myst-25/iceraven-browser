@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-A powerful, priv2.32.1cy-focused browser for Android devices, built on Mozilla's GeckoView engine.
+A powerful, priv2.33.0cy-focused browser for Android devices, built on Mozilla's GeckoView engine.
 
 [Features](#features) • [Download](#download) • [Documentation](#documentation) • [Contributing](#contributing)
 
@@ -15,11 +15,11 @@ A powerful, priv2.32.1cy-focused browser for Android devices, built on Mozilla's
 
 ## ✨ Overview
 
-Iceraven Browser is a feature-rich, priv2.32.1cy-focused web browser for Android devices. Built on Mozilla's powerful GeckoView engine, it offers adv2.32.1nced customization options, extended add-on support, and enhanced priv2.32.1cy features.
+Iceraven Browser is a feature-rich, priv2.33.0cy-focused web browser for Android devices. Built on Mozilla's powerful GeckoView engine, it offers adv2.33.0nced customization options, extended add-on support, and enhanced priv2.33.0cy features.
 
 ## 🚀 Features
 
-### 🔧 Adv2.32.1nced Configuration
+### 🔧 Adv2.33.0nced Configuration
 
 - Full access to `about:config` for deep browser customization
 - Fine-tuned browsing experience
@@ -37,10 +37,10 @@ Iceraven Browser is a feature-rich, priv2.32.1cy-focused web browser for Android
 - Prevents browser termination due to memory constraints
 - Optimized performance for low-memory devices
 
-### 🛡️ Priv2.32.1cy Control
+### 🛡️ Priv2.33.0cy Control
 
 - Option to disable recently visited websites
-- Enhanced priv2.32.1cy features
+- Enhanced priv2.33.0cy features
 - Customizable tracking protection
 
 ### 🏗️ GeckoView Engine
@@ -56,12 +56,12 @@ Iceraven Browser is a feature-rich, priv2.32.1cy-focused web browser for Android
 **Iceraven 2.31.0** (May 8, 2024)
 
 - Based on Fenix 138.0
-- [View Release Notes](https://github.com/fork-maintainers/iceraven-browser/releases/tag/iceraven-2.32.1)
+- [View Release Notes](https://github.com/fork-maintainers/iceraven-browser/releases/tag/iceraven-2.33.0)
 
 ### Supported Architectures
 
-- **ARM64-v2.32.1**: 64-bit ARM devices
-- **ARM-v2.32.1**: 32-bit ARM devices
+- **ARM64-v2.33.0**: 64-bit ARM devices
+- **ARM-v2.33.0**: 32-bit ARM devices
 - **x86_64**: 64-bit Intel devices
 - **x86**: 32-bit Intel devices
 
@@ -95,8 +95,8 @@ Visit our [Releases Page](https://github.com/fork-maintainers/iceraven-browser/r
 
 ### Prerequisites
 
-- Node.js (v2.32.1 or higher)
-- npm (v2.32.1 or higher)
+- Node.js (v2.33.0 or higher)
+- npm (v2.33.0 or higher)
 - Git
 
 ### Local Setup
