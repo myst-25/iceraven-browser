@@ -1,7 +1,7 @@
 {
   "name": "Iceraven Browser",
   "short_name": "Iceraven",
-  "description": "A fast, secure, and priv2.32.0te web browser",
+  "description": "A fast, secure, and priv2.33.1te web browser",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#007acc",
